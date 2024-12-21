@@ -1,7 +1,7 @@
 # Proposta de Projeto
 
 ## Objetivos
-Para este projeto temos como objetivo desenvolver um website estilo portfólio digital de 
+O objetivo do projeto é desenvolver um website estilo portfólio digital de 
 experiências de viagem, gerido por dois jovens apaixonados por explorar o mundo. Planeamos 
 que seja visualmente cativante e informativo, refletindo as singularidades de cada destino 
 visitado. 
