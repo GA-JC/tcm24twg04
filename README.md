@@ -5,8 +5,6 @@
 
 | <a href="proposta.md">&lt; Acessar Proposta</a> |
 |:--:|
-| <a href="proposta.md">Acessar Proposta</a> |
-| <a href="proposta.md">Próximo &gt;</a> |
 
 ## Repository Organization
 
