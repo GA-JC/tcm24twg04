@@ -19,7 +19,6 @@ Embora o website não ofereça funções de interação típicas de blogues (com
 - **Formulário para Visitantes**: Um formulário funcional permitirá que os leitores sugiram novos destinos para serem explorados. Esta página será projetada para fornecer uma ligação entre nós como "escritores" e o público, oferecendo-lhes uma forma de participar nas decisões do projeto.
 
 ## Repository Organization
-Please help the reader navigate around by describing how the repository is organized:
 
 - Source code is in the `src` folder.
 - Report chapters are in the `docs` folder.
