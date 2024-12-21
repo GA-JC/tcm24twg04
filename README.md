@@ -1,6 +1,8 @@
 # tcm24twg04
 # Portfólio de Experiências de Viagem
 
+O projeto consiste em um website estilo portfólio digital sobre experiências de viagem.
+
 ## Proposta de Projeto
 
 | [Aceder à proposta](docs/Proposta.md) |
