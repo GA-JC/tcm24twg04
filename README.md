@@ -25,34 +25,21 @@ Please help the reader navigate around by describing how the repository is organ
 - Report chapters are in the `docs` folder.
 
 ## Gallery
-Please provide a gallery of the final result, with small images. A table may be useful to organize the images.
 
 | Image Description | Image |
 |-------------------|-------|
-| Example Image 1   | ![Image 1](link_to_image_1) |
+| Example Image 1   | ![Image 1](Boston_Back_Bay.jpg) |
 | Example Image 2   | ![Image 2](link_to_image_2) |
 | Example Image 3   | ![Image 3](link_to_image_3) |
 
 ## Technologies
-Indicate the technologies you have used in this assignment. Please provide links for the user to read more about those technologies.
 
 - [XML](https://www.w3schools.com/xml/)
 - [HTML5](https://www.w3schools.com/html/html5_intro.asp) + [CSS3](https://www.w3schools.com/css/css_intro.asp)
 - [JavaScript](https://www.w3schools.com/js/)
 
 
-## Report
-Please add at least one section (a file) per chapter. But you can add more.
 
-### Chapter 1: Project Presentation
-- [Link to Chapter 1](docs/chapter1_project_presentation.md)
-
-### Chapter 2: User Interface Prototype and Sitemap
-- [Link to Chapter 2](docs/chapter2_user_interface.md)
-
-### Chapter 3: Product Presentation
-- [Link to Chapter 3](docs/chapter3_product_presentation.md)
-
-### Chapter 4: Presentation Team
+### Team
 - Guilherme Andrade [@adr-g](https://github.com/adr-g)
 - Jonathan Claro [@JonathanClaro](https://github.com/JonathanClaro)
