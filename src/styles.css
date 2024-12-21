@@ -40,7 +40,7 @@ color: rgb(0, 0, 0);
 .content {
     padding: 20px;
     flex-grow: 1;
-    background-image: url('Boston_Back_Bay.jpg');
+    background-image: url('images\Boston_Back_Bay.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
