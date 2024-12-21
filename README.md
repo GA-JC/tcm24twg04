@@ -1,11 +1,22 @@
 # tcm24twg04
-# My Example Work Assignment
+# Portfólio de Experiências de Viagem
 
-## Title
-Repository to host the project developed for 'some class', a first-year subject at SOMESCHOOL. Developed by Group ALPHA: @MarcoOliveira, [add others].
+## Proposta de Projeto
+Este repositório hospeda o projeto desenvolvido para o portfólio digital de experiências de viagem, gerido por dois jovens apaixonados por explorar o mundo. O objetivo é criar um website visualmente cativante e informativo, refletindo as singularidades de cada destino visitado.
 
-## Short Theme Description
-An example report using Markdown on GitHub. This documentation is written using Markdown. Here is a link to the [basic syntax](https://www.markdownguide.org/basic-syntax/), but an [extended syntax](https://www.markdownguide.org/extended-syntax/) is also available. If you're starting with Markdown, you may want to try a [Markdown Tutorial](https://www.markdowntutorial.com/) and read the getting started section.
+Embora o website não ofereça funções de interação típicas de blogues (como comentários), o objetivo é criar um espaço organizado e acessível que inspire outros viajantes e compartilhe nossas aventuras de forma envolvente e profissional. A combinação de conteúdo informativo, design temático e funcionalidades claras tornará o projeto uma ferramenta única para explorar o mundo através das nossas experiências.
+
+### Composição do Website
+- **Página Principal (index)**: Uma introdução ao projeto, incluindo uma breve descrição da nossa "missão", uma galeria de imagens destacando alguns destinos e um design apelativo que capte a essência do espírito aventureiro.
+  
+- **Páginas Dedicadas a Viagens Específicas**: Cada viagem terá sua própria página, onde apresentaremos:
+  - **Descrição da Experiência**: Um relato envolvente que descreve brevemente nossa opinião sobre a viagem.
+  - **Tabela de Custos**: Um detalhe transparente dos nossos gastos (pela nossa experiência), como transporte, alojamento, alimentação e atividades.
+  - **Galeria de Imagens**: Fotografias selecionadas que mostram memórias das viagens.
+
+- **Design Temático**: Cada página será personalizada de acordo com o país ou cidade em destaque. Por exemplo, para uma viagem a um destino de praia, uma paleta de cores ligada ao mar e à costa. Já uma página sobre uma viagem a Paris poderá destacar tons pastel e elementos icônicos como a Torre Eiffel.
+
+- **Formulário para Visitantes**: Um formulário funcional permitirá que os leitores sugiram novos destinos para serem explorados. Esta página será projetada para fornecer uma ligação entre nós como "escritores" e o público, oferecendo-lhes uma forma de participar nas decisões do projeto.
 
 ## Repository Organization
 Please help the reader navigate around by describing how the repository is organized:
@@ -28,20 +39,7 @@ Indicate the technologies you have used in this assignment. Please provide links
 - [XML](https://www.w3schools.com/xml/)
 - [HTML5](https://www.w3schools.com/html/html5_intro.asp) + [CSS3](https://www.w3schools.com/css/css_intro.asp)
 - [JavaScript](https://www.w3schools.com/js/)
-- [PHP](https://www.php.net/)
-- [Node.js](https://nodejs.org/)
-- [Java](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
-- Any other? (Please specify)
 
-## Frameworks and Libraries
-Did you use any additional libraries? Describe them here.
-
-- [Docker](https://www.docker.com/)
-- [Multipass](https://multipass.run/)
-- [Node.js](https://nodejs.org/)
-- [jQuery](https://jquery.com/)
-- [Laravel](https://laravel.com/)
-- [Bootstrap](https://getbootstrap.com/)
 
 ## Report
 Please add at least one section (a file) per chapter. But you can add more.
@@ -56,5 +54,5 @@ Please add at least one section (a file) per chapter. But you can add more.
 - [Link to Chapter 3](docs/chapter3_product_presentation.md)
 
 ### Chapter 4: Presentation Team
-- Marco Amaro Oliveira [@MarcoOliveira](https://github.com/MarcoOliveira)
-- Other team members: [add names and links]
+- Guilherme Andrade [@adr-g](https://github.com/adr-g)
+- Jonathan Claro [@JonathanClaro](https://github.com/JonathanClaro)
