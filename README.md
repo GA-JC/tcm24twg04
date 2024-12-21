@@ -1,7 +1,7 @@
 # tcm24twg04
 # Portfólio de Experiências de Viagem
 
-O projeto consiste em um website estilo portfólio digital sobre experiências de viagem.
+O projeto consiste em um website estilo portfólio digital sobre experiências de viagem. Temos como objetivo transmitir ao leitor informações e experiências de uma forma simples, e através de várias codificações semióticas, oferecer ao leitor determinados valores em cada elemento, criando uma harmonia entre o conteûdo e o design.
 
 ## Proposta de Projeto
 
