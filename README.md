@@ -3,7 +3,11 @@
 
 ## Proposta de Projeto
 
-<a href="proposta.md">&lt; Acessar Proposta</a>
+| <a href="proposta.md">&lt; Acessar Proposta</a> |
+|:--:|
+| <a href="proposta.md">Acessar Proposta</a> |
+| <a href="proposta.md">Próximo &gt;</a> |
+
 ## Repository Organization
 
 - Source code is in the `src` folder.
