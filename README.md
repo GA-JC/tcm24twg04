@@ -28,7 +28,7 @@ Please help the reader navigate around by describing how the repository is organ
 
 | Image Description | Image |
 |-------------------|-------|
-| Example Image 1   | <img src="Boston_Back_Bay.jpg" alt="Image 1" width="200" /> |
+| Boston Bay   | <img src="Boston_Back_Bay.jpg" alt="Image 1" width="300" /> |
 | Example Image 2   | ![Image 2](link_to_image_2) |
 | Example Image 3   | ![Image 3](link_to_image_3) |
 
