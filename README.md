@@ -3,7 +3,7 @@
 
 ## Proposta de Projeto
 
-[**Clique aqui para acessar a proposta**](Proposta.md)
+[**Clique aqui para acessar a proposta**](docs/Proposta.md)
 
 ## Repository Organization
 
