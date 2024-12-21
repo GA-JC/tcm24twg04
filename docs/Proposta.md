@@ -23,33 +23,6 @@ o mundo através das nossas experiências.
 
 - **Formulário para Visitantes**: Um formulário funcional permitirá que os leitores sugiram novos destinos para serem explorados. Esta página será projetada para fornecer uma ligação entre nós como "escritores" e o público, oferecendo-lhes uma forma de participar nas decisões do projeto.
 
-## Composição 
-▪ **Página principal (index)**: Uma introdução ao projeto, incluindo uma breve descrição da 
-nossa "missão", uma galeria de imagens destacando alguns destinos e um design 
-apelativo que capte a essência do espírito aventureiro.
-
-▪ **Páginas dedicadas a viagens específicas**: Cada viagem teria a sua própria página, onde 
-apresentaremos:
-
-• Descrição da experiência: Um relato envolvente que descreve brevemente a 
-nossa opinião da viagem.
-
-• Tabela de custos: Um detalhe transparente dos nossos gastos (pela nossa 
-experiência), como transporte, alojamento, alimentação e atividades.
-
-• Galeria de imagens: Fotografias selecionadas que mostram memórias das 
-viagens.
-
-▪ **Design temático**: Cada página seria personalizada de acordo com o país ou cidade em 
-destaque. Por exemplo, para uma viagem a um destino de praia, uma paleta de cores 
-ligada a mar e costa. Já uma página sobre uma viagem a por exemplo Paris poderá 
-destacar tons pastel e elementos icónicos como a Torre Eiffel.
-
-▪ **Formulário para visitantes**: Um formulário funcional permitirá que os leitores sugiram 
-novos destinos para serem explorados. Esta página seria projetada para fornecer uma 
-ligação de nós como "escritores" para com o público, oferecendo-lhes uma forma de 
-participar nas decisões do projeto.
-
 ## Links 
 - Repositório GitHub [@tcm24twg04](https://github.com/GA-JC/tcm24twg04)
 - Netlify [@Netlify](https://tcm24twg04.netlify.app/)
