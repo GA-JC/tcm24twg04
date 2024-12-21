@@ -32,5 +32,5 @@ o mundo através das nossas experiências.
 - Guilherme Andrade A045395 
 - Jonathan Claro A045207
 
-| [Aceder à proposta](../README.md) |
+| [Aceder ao README](../README.md) |
 |:----------------------------------:|
