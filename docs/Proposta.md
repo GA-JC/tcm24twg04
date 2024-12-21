@@ -51,8 +51,8 @@ ligação de nós como "escritores" para com o público, oferecendo-lhes uma for
 participar nas decisões do projeto.
 
 ## Links 
-Repositório GitHub [@tcm24twg04](https://github.com/GA-JC/tcm24twg04)
-Netlify: https://tcm24twg04.netlify.app/ 
+- Repositório GitHub [@tcm24twg04](https://github.com/GA-JC/tcm24twg04)
+- Netlify [@Netlify](https://tcm24twg04.netlify.app/)
 
 ## Alunos e Grupo 
 - tcm24twg04 
