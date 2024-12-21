@@ -3,7 +3,7 @@
 
 ## Proposta de Projeto
 
-| <a href="proposta.md">&lt; Acessar Proposta</a> |
+| <a href="proposta.md">&lt; Acessar Proposta</a> | (docs/Proposta.md)
 |:--:|
 
 ## Repository Organization
