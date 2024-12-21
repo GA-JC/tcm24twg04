@@ -13,7 +13,7 @@ O projeto consiste em um website estilo portfólio digital sobre experiências d
 Este projeto está "LIVE" com recurso à plataforma Netlify.
 Através da criação de um projeto com acesso ao reportório do GitHub, a plataforma Netlify dá deploy automaticamente aos ficheiros presentes no repositório (main@HEAD).
 
-P.S. Ainda não conseguimos dar streamline nos deploys da plataforma. Todos os ficheiros que levam upload para o reportório levam deploy mas apenas os ficheiros que não estão numa sub-pasta ficam legíveis para a plataforma. Nós queremos fazer com que a plataforma apenas dê deploy a, por exemplo, main/src.
+P.S. Ainda não conseguimos dar streamline nos deploys da plataforma. Todos os ficheiros que levam upload para o reportório levam deploy mas apenas os ficheiros que não estão numa sub-pasta ficam legíveis para a mesma. Nós queremos fazer com que a plataforma apenas dê deploy a, por exemplo, main/src.
 
 | [Aceder à sub-pasta src](src/) |
 |:----------------------------------:|
