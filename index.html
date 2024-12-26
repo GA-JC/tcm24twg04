@@ -1,69 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beta Test V1.01</title>
+    <title>GA-JC travel portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-        <aside class="sidebar" class="container">
-            <h2>Beta Test V1.01</h2>
-            <p><strong>Live</strong> beta version of our website.</p>
-            <p>A045395 <br> A045207</p>
-        </aside>
-        <main class="content">
-            <h1>Welcome to Our Website</h1>
-            <div class="cards">
-            <section>
-                <h3>Objetivos</h3>
-                <p>Para este projeto temos como objetivo desenvolver um website estilo portfólio digital de experiências de viagem, gerido por dois jovens apaixonados por explorar o mundo. Planeamos que seja visualmente cativante e informativo, refletindo as singularidades de cada destino visitado.</p>
-                <p>Embora o website não ofereça funções de interação típicas de blogues (como comentários), o objetivo é criar um espaço organizado e acessível que inspire outros viajantes e partilhe as nossas aventuras de forma envolvente e profissional.</p>
-            </section>
-
-            <section>
-                <h3>Composição</h3>
-                <ul>
-                    <li>
-                        <strong>Página principal (index):</strong>
-                        <p>Uma introdução ao projeto, incluindo uma breve descrição da nossa "missão", uma galeria de imagens destacando alguns destinos e um design apelativo que capte a essência do espírito aventureiro.</p>
-                    </li>
-                    <li>
-                        <strong>Páginas dedicadas a viagens específicas:</strong>
-                        <ul>
-                            <li>
-                                <strong>Descrição da experiência:</strong>
-                                <p>Um relato envolvente que descreve brevemente a nossa opinião da viagem.</p>
-                            </li>
-                            <li>
-                                <strong>Tabela de custos:</strong>
-                                <p>Um detalhe transparente dos nossos gastos (pela nossa experiência), como transporte, alojamento, alimentação e atividades.</p>
-                            </li>
-                            <li>
-                                <strong>Galeria de imagens:</strong>
-                                <p>Fotografias selecionadas que mostram memórias das viagens.</p>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Design temático:</strong>
-                        <p>Cada página seria personalizada de acordo com o país ou cidade em destaque.</p>
-                    </li>
-                    <li>
-                        <strong>Formulário para visitantes:</strong>
-                        <p>Um formulário funcional permitirá que os leitores sugiram novos destinos para serem explorados.</p>
-                    </li>
-                </ul>
-            </section>
-
-            <section>
-                <h3>Links</h3>
-                <ul>
-                    <li><a href="https://github.com/GA-JC/tcm24twg04">Repositório GitHub</a></li>
-                    <li><a href="https://tcm24twg04.netlify.app/">Netlify</a></li>
-                </ul>
-            </section>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/GA-JC.png" alt="Logo">
+            </a>
         </div>
-        </main>
+        <nav>
+            <ul id="navList" class="nav-list">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li>
+                    <a href="#" id="destinosBtn" class="dropdown-toggle">Destinos</a>
+                    <ul class="dropdown">
+                        <li><a href="boston.html">Boston</a></li>
+                        <li><a href="monaco.html">Monaco</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">Sobre Nós</a></li>
+                <li><a href="contact.html">Contacte-nos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="carousel">
+        <div class="carousel-images">
+            <img src="images/Boston_Back_Bay.jpg" alt="Boston Back Bay" class="active">
+            <img src="images/Bateau-Bus.jpg" alt="Bateau Bus Monaco">
+            <img src="images/boston-snow.jpg" alt="Snow in Boston">
+            <img src="images/monte-carlo.jpg" alt="Monte Carlo">
+        </div>
+        <button class="carousel-button prev">❮</button>
+        <button class="carousel-button next">❯</button>
+    </section>
+
+    <main class="content">
+        <h1>Portfólio de Viagens</h1>
+        <p>Este é um espaço dedicado às nossas experiências de viagem e aventuras! Aqui, vão encontrar uma coleção de relatos e experiências de diversas viagens, desde cidades vibrantes até recantos escondidos.</p>
+        <p>O nosso portfólio apresenta detalhes sobre os lugares visitados, incluindo informações sobre os custos e atividades em cada local. O objetivo é inspirar e ajudar qualquer pessoa que passe por aqui.</p>
+        <p>Explore o website e descubra por onde andamos a viajar, destinos que podem desbloquear a curiosidade e o desejo de explorar o mundo.</p>
+        <p>Deixe-se inspirar pelas nossas experiências. O mundo é vasto e cheio de maravilhas, e estamos aqui para ajudá-lo a ganhar vontade de o ir explorar!</p>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+        </div>
+        <p>© 2024 GA-JC. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
