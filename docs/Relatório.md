@@ -13,9 +13,7 @@ Uma das principais funcionalidades do projeto é a galeria de imagens, presente 
 - **boston.html**
 
 |-------------------|-------|
-| Ex. Galeria   | <img src="docs/docs-img/galeria.png" alt="Image 1" width="300" /> |
-
-<img src="docs/docs-img/galeria.png" />
+| Ex. Galeria   | <img src="docs/docs-img/galeria.png" alt="Galeria" width="300" /> |
 
 Esta galeria permite que o utilizador navegue pelas imagens escolhidas usando botões de navegação (“Próx” e “Ant”). A implementação utiliza **JavaScript** para:
 - Rotacionar as imagens dinamicamente;
@@ -25,7 +23,7 @@ Esta galeria permite que o utilizador navegue pelas imagens escolhidas usando bo
 Para melhorar a usabilidade, foi criado um menu **dropdown** que permite ao leitor selecionar rapidamente os destinos disponíveis. Este menu torna a navegação entre páginas mais intuitiva e ajuda a organizar o conteúdo do nav do site.
 
 |-------------------|-------|
-| Ex. Dropdown menu   | <img src="docs/docs-img/dropdown.png" alt="Image 1" width="300" /> |
+| Ex. Dropdown menu   | <img src="docs/docs-img/dropdown.png" alt="Dropdown menu" width="300" /> |
 
 ### 3. Botão "Load Costs"
 Outra funcionalidade relevante é o botão **"loadCostsBtn"**, que está integrado para:
@@ -33,7 +31,7 @@ Outra funcionalidade relevante é o botão **"loadCostsBtn"**, que está integra
 - Mostrar ou esconder essa tabela conforme a necessidade do utilizador.
 
 |-------------------|-------|
-| Ex. Botão e Tabela   | <img src="docs/docs-img/table.png" alt="Image 1" width="300" /> |
+| Ex. Botão e Tabela   | <img src="docs/docs-img/table.png" alt="Botão e Tabela" width="300" /> |
 
 A população da tabela é feita utilizando **JavaScript**, que realiza uma requisição ao ficheiro `custos.xml`. O script interpreta os dados no formato XML e os insere dinamicamente no HTML, proporcionando uma solução elegante para apresentar informações adicionais sem recarregar a página.
 
@@ -43,8 +41,8 @@ Durante o processo de deploy, surgiram problemas relacionados ao funcionamento d
 Através da inserção de diversos **console.logs** em pontos estratégicos do código, foi possível identificar que o URL estava a ser interpretado de forma incorreta como `https://tcm24twg04.netlify.app/boston.html` em vez de `https://tcm24twg04.netlify.app/boston`. A correção envolveu ajustar o código para lidar com URLs de maneira adequada no ambiente de produção.
 
 |-------------------|-------|
-| Pre Fix Botão   | <img src="docs/docs-img/deploy-prefix.png" alt="Image 1" width="300" /> |
-| After Fix Botão   | <img src="docs/docs-img/deploy-aftfix.png" alt="Image 1" width="300" /> |
+| Pre Fix Botão   | <img src="docs/docs-img/deploy-prefix.png" alt="Pre Fix Botão" width="300" /> |
+| After Fix Botão   | <img src="docs/docs-img/deploy-aftfix.png" alt="After Fix Botão" width="300" /> |
 
 ## Tecnologias Utilizadas
 
