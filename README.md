@@ -19,7 +19,7 @@ O Netlify inicialmente não dava deploy a qualquer ficheiro que estivesse numa s
 
 | Build Settings |
 |-------------------|
-| <img src="docs/docs-img/build_settings.png" alt="Image 1" width="300" /> |
+| <img src="docs/docs-img/build_settings.png" alt="Image 1" width="600" /> |
 
 ## Repository Organization
 
