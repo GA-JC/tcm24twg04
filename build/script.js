@@ -126,9 +126,11 @@ function initLoadCosts() {
                           currencySymbol = '€';
                       }
 
+                      console.log('Cidade a verificar:', cityName); // Log da cidade a verificar
                       let foundCity = false; // Flag verificar a cidade encontrada
 
                       for (let i = 0; i < locais.length; i++) {
+                          console.log('Verificando local:', locais[i].getAttribute('nome')); // Log do nome do local
                           if (locais[i].getAttribute('nome') === cityName) {
                               foundCity = true;
                               const custos = locais[i].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "custo");
