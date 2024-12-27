@@ -145,8 +145,6 @@ function initLoadCosts() {
                   });
           }
       });
-  } else {
-      console.warn('Elemento "loadCostsBtn" não encontrado.');
   }
 }
 
