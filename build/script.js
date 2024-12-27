@@ -98,14 +98,21 @@ function initLoadCosts() {
               fetch('custos.xml')
                   .then(response => {
                       if (!response.ok) {
+                          console.error('Erro na resposta da rede:', response.status, response.statusText);
                           throw new Error('Network response was not ok');
                       }
                       return response.text();
                   })
                   .then(data => {
+                      console.log('Dados XML recebidos:', data); // Log dos dados recebidos
                       const parser = new DOMParser();
                       const xmlDoc = parser.parseFromString(data, "text/xml");
                       const locais = xmlDoc.getElementsByTagNameNS("https://tcm24twg04.netlify.app", "local");
+
+                      if (locais.length === 0) {
+                          console.error('Nenhum local encontrado no XML.');
+                          return; // Retornar se não houver locais
+                      }
 
                       const currentPage = window.location.pathname;
                       let currencySymbol = '';
@@ -119,9 +126,17 @@ function initLoadCosts() {
                           currencySymbol = '€';
                       }
 
+                      let foundCity = false; // Flag verificar a cidade encontrada
+
                       for (let i = 0; i < locais.length; i++) {
                           if (locais[i].getAttribute('nome') === cityName) {
+                              foundCity = true;
                               const custos = locais[i].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "custo");
+
+                              if (custos.length === 0) {
+                                  console.error('Nenhum custo encontrado para a cidade:', cityName);
+                                  return;
+                              }
 
                               for (let j = 0; j < custos.length; j++) {
                                   const item = custos[j].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "item")[0].textContent;
@@ -129,10 +144,10 @@ function initLoadCosts() {
 
                                   const row = document.createElement('tr');
                                   const cellItem = document.createElement('td');
-                                  cellItem.textContent = item; // Usando textContent
+                                  cellItem.textContent = item;
 
                                   const cellValor = document.createElement('td');
-                                  cellValor.textContent = `${currencySymbol}${valor}`; // Usando textContent
+                                  cellValor.textContent = `${currencySymbol}${valor}`;
 
                                   row.appendChild(cellItem);
                                   row.appendChild(cellValor);
@@ -143,14 +158,21 @@ function initLoadCosts() {
                               table.classList.add('show');
                               table.style.display = 'table';
                               tableFooter.style.display = 'block';
+                              console.log('Tabela exibida com os dados carregados.');
                           }
+                      }
+
+                      if (!foundCity) {
+                          console.error('Cidade não encontrada no XML:', cityName);
                       }
                   })
                   .catch(error => {
-                      console.error('Erro ao carregar o XML:', error); // Erro ao carregar o XML
+                      console.error('Erro ao carregar o XML:', error);
                   });
           }
       });
+  } else {
+      console.error('Botão "loadCostsBtn" não encontrado no DOM.');
   }
 }
 
