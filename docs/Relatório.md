@@ -12,8 +12,9 @@ Uma das principais funcionalidades do projeto é a galeria de imagens, presente 
 - **monaco.html**
 - **boston.html**
 
-|---------------------------|
-| Ex. Galeria   <img src="docs-img/galeria.png" alt="Galeria" width="300" /> |
+| Image Description | Image |
+|-------------------|-------|
+| Ex. Galeria   | <img src="docs-img/galeria.png" alt="Galeria" width="300" /> |
 
 Esta galeria permite que o utilizador navegue pelas imagens escolhidas usando botões de navegação (“Próx” e “Ant”). A implementação utiliza **JavaScript** para:
 - Rotacionar as imagens dinamicamente;
