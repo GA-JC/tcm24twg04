@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE custos [
+    <!ENTITY dollar "&#36;">
+    <!ENTITY euro "&#x20AC;">
+]>
+<custos xmlns="https://tcm24twg04.netlify.app/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://tcm24twg04.netlify.app/ custos.xsd">
+    <local nome="Boston">
+        <currency>&dollar;</currency>
+        <custo>
+            <item>Transporte: Ida e Volta</item>
+            <valor>200</valor>
+        </custo>
+        <custo>
+            <item>Alojamento(s)</item>
+            <valor>800</valor>
+        </custo>
+        <custo>
+            <item>Alimentação</item>
+            <valor>300</valor>
+        </custo>
+        <custo>
+            <item>Deslocação</item>
+            <valor>150</valor>
+        </custo>
+        <custo>
+            <item>Atividades</item>
+            <valor>100</valor>
+        </custo>
+        <custo>
+            <item>Extras</item>
+            <valor>50</valor>
+        </custo>
+    </local>
+    <local nome="Monaco">
+        <currency>&euro;</currency>
+        <custo>
+            <item>Transporte: Ida e Volta</item>
+            <valor>250</valor>
+        </custo>
+        <custo>
+            <item>Alojamento(s)</item>
+            <valor>900</valor>
+        </custo>
+        <custo>
+            <item>Alimentação</item>
+            <valor>350</valor>
+        </custo>
+        <custo>
+            <item>Deslocação</item>
+            <valor>200</valor>
+        </custo>
+        <custo>
+            <item>Atividades</item>
+            <valor>150</valor>
+        </custo>
+        <custo>
+            <item>Extras</item>
+            <valor>75</valor>
+        </custo>
+    </local>
+</custos>

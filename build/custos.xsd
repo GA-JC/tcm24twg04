@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="https://tcm24twg04.netlify.app/"
+    targetNamespace="https://tcm24twg04.netlify.app/"
+    elementFormDefault="qualified">
+
+    <xs:element name="custos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="local" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="currency" type="xs:string" />
+                            <xs:element name="custo" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="item" type="xs:string" />
+                                        <xs:element name="valor" type="xs:decimal" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="nome" type="xs:string" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
