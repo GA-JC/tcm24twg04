@@ -81,7 +81,7 @@ function initLoadCosts() {
   const table = document.getElementById('custosTable');
   const tableFooter = document.querySelector('.table-footer');
 
-  // Verificar se o botão existe antes de adicionar o event listener
+  // verificar o botão antes de add event listener
   if (loadCostsBtn) {
       loadCostsBtn.addEventListener('click', function () {
           console.log('Botão "loadCostsBtn" clicado');
