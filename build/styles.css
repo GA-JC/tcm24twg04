@@ -136,10 +136,13 @@ nav ul li .dropdown.active {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* sombra */
     overflow: hidden;
     position: relative;
-    width: 1000px;
+    width: 900px;
     height: 500px;
     max-width: 100%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel img {
@@ -148,6 +151,17 @@ nav ul li .dropdown.active {
     object-fit: cover;
     display: none; /* esconde imgs inicialmente */
     transition: transform 0.5s ease; /* animação suave */
+}
+
+.small-carousel {
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.small-carousel img {
+    width: 100%;
+    height: auto;
 }
 
 .carousel img.active {
@@ -383,8 +397,8 @@ iframe {
     }
 
     .carousel {
-        max-width: 100%; /* ocupar largura tela em mobile */
-        height:auto;
+        max-width: 90%; /* ocupar largura tela em mobile */
+        max-height: 30%;
     }
 
     .carousel-button {
