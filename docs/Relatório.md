@@ -13,7 +13,9 @@ Uma das principais funcionalidades do projeto é a galeria de imagens, presente 
 - **boston.html**
 
 |-------------------|-------|
-| Ex. Galeria   | <img src="./docs/docs-img/galeria.png" alt="Image 1" width="300" /> |
+| Ex. Galeria   | <img src="docs/docs-img/galeria.png" alt="Image 1" width="300" /> |
+
+<img src="docs/docs-img/galeria.png" />
 
 Esta galeria permite que o utilizador navegue pelas imagens escolhidas usando botões de navegação (“Próx” e “Ant”). A implementação utiliza **JavaScript** para:
 - Rotacionar as imagens dinamicamente;
