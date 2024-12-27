@@ -81,69 +81,74 @@ function initLoadCosts() {
   const table = document.getElementById('custosTable');
   const tableFooter = document.querySelector('.table-footer');
 
-  loadCostsBtn.addEventListener('click', function () {
-      console.log('Botão "loadCostsBtn" clicado');
+  // Verificar se o botão existe antes de adicionar o event listener
+  if (loadCostsBtn) {
+      loadCostsBtn.addEventListener('click', function () {
+          console.log('Botão "loadCostsBtn" clicado');
 
-      if (table.classList.contains('show')) {
-          table.classList.remove('show');
-          table.style.display = 'none';
-          tableFooter.style.display = 'none';
-      } else {
-          const tbody = table.querySelector('tbody');
-          tbody.innerHTML = ''; // clear table
+          if (table.classList.contains('show')) {
+              table.classList.remove('show');
+              table.style.display = 'none';
+              tableFooter.style.display = 'none';
+          } else {
+              const tbody = table.querySelector('tbody');
+              tbody.innerHTML = ''; // clear table
 
-          fetch('custos.xml')
-              .then(response => {
-                  if (!response.ok) {
-                      throw new Error('Network response was not ok');
-                  }
-                  return response.text();
-              })
-              .then(data => {
-                  const parser = new DOMParser();
-                  const xmlDoc = parser.parseFromString(data, "text/xml");
-                  const locais = xmlDoc.getElementsByTagName('local');
+              fetch('custos.xml')
+                  .then(response => {
+                      if (!response.ok) {
+                          throw new Error('Network response was not ok');
+                      }
+                      return response.text();
+                  })
+                  .then(data => {
+                      const parser = new DOMParser();
+                      const xmlDoc = parser.parseFromString(data, "text/xml");
+                      const locais = xmlDoc.getElementsByTagName('local');
 
-                  const currentPage = window.location.pathname;
-                  let currencySymbol = '';
-                  let cityName = '';
+                      const currentPage = window.location.pathname;
+                      let currencySymbol = '';
+                      let cityName = '';
 
-                  if (currentPage.includes('boston.html')) {
-                      cityName = 'Boston';
-                      currencySymbol = '$';
-                  } else if (currentPage.includes('monaco.html')) {
-                      cityName = 'Monaco';
-                      currencySymbol = '€';
-                  }
+                      if (currentPage.includes('boston.html')) {
+                          cityName = 'Boston';
+                          currencySymbol = '$';
+                      } else if (currentPage.includes('monaco.html')) {
+                          cityName = 'Monaco';
+                          currencySymbol = '€';
+                      }
 
-                  for (let i = 0; i < locais.length; i++) {
-                      if (locais[i].getAttribute('nome') === cityName) {
-                          const custos = locais[i].getElementsByTagName('custo');
+                      for (let i = 0; i < locais.length; i++) {
+                          if (locais[i].getAttribute('nome') === cityName) {
+                              const custos = locais[i].getElementsByTagName('custo');
 
-                          for (let j = 0; j < custos.length; j++) {
-                              const item = custos[j].getElementsByTagName('item')[0].textContent;
-                              const valor = custos[j].getElementsByTagName('valor')[0].textContent;
+                              for (let j = 0; j < custos.length; j++) {
+                                  const item = custos[j].getElementsByTagName('item')[0].textContent;
+                                  const valor = custos[j].getElementsByTagName('valor')[0].textContent;
 
-                              const escapedItem = item.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-                              const escapedValor = valor.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                                  const escapedItem = item.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                                  const escapedValor = valor.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-                              const row = `<tr><td>${escapedItem}</td><td>${currencySymbol}${escapedValor}</td></tr>`;
-                              tbody.innerHTML += row; // add row body
-                            }
+                                  const row = `<tr><td>${escapedItem}</td><td>${currencySymbol}${escapedValor}</td></tr>`;
+                                  tbody.innerHTML += row; // add row body
+                              }
 
-                            // table
-                            table.classList.add('show');
-                            table.style.display = 'table';
-                            tableFooter.style.display = 'block';
-                        }
-                    }
-                })
-                .catch(error => {
-                    console.error('Erro ao carregar o XML:', error); // erro xml
-                });
-        }
-    });
-};
+                              // table
+                              table.classList.add('show');
+                              table.style.display = 'table';
+                              tableFooter.style.display = 'block';
+                          }
+                      }
+                  })
+                  .catch(error => {
+                      console.error('Erro ao carregar o XML:', error); // erro xml
+                  });
+          }
+      });
+  } else {
+      console.warn('Elemento "loadCostsBtn" não encontrado.');
+  }
+}
 
 
 document.addEventListener('DOMContentLoaded', function () {
