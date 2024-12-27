@@ -105,7 +105,7 @@ function initLoadCosts() {
                   .then(data => {
                       const parser = new DOMParser();
                       const xmlDoc = parser.parseFromString(data, "text/xml");
-                      const locais = xmlDoc.getElementsByTagNameNS("https://tcm24twg04.netlify.app", "local"); // Usando o namespace
+                      const locais = xmlDoc.getElementsByTagNameNS("https://tcm24twg04.netlify.app", "local");
 
                       const currentPage = window.location.pathname;
                       let currencySymbol = '';
@@ -121,11 +121,11 @@ function initLoadCosts() {
 
                       for (let i = 0; i < locais.length; i++) {
                           if (locais[i].getAttribute('nome') === cityName) {
-                              const custos = locais[i].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "custo"); // Usando o namespace
+                              const custos = locais[i].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "custo");
 
                               for (let j = 0; j < custos.length; j++) {
-                                  const item = custos[j].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "item")[0].textContent; // Usando o namespace
-                                  const valor = custos[j].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "valor")[0].textContent; // Usando o namespace
+                                  const item = custos[j].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "item")[0].textContent;
+                                  const valor = custos[j].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "valor")[0].textContent;
 
                                   const row = document.createElement('tr');
                                   const cellItem = document.createElement('td');
