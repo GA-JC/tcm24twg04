@@ -14,7 +14,7 @@ Uma das principais funcionalidades do projeto é a galeria de imagens, presente 
 
 | Ex. Galeria |
 |--------------------------|
-| <img src="docs-img/galeria.png" alt="Galeria" width="300" /> |
+| <img src="docs-img/galeria.png" alt="Galeria" width="400" /> |
 
 Esta galeria permite que o utilizador navegue pelas imagens escolhidas usando botões de navegação (“Próx” e “Ant”). A implementação utiliza **JavaScript** para:
 - Rotacionar as imagens dinamicamente;
@@ -25,7 +25,7 @@ Para melhorar a usabilidade, foi criado um menu **dropdown** que permite ao leit
 
 | Ex. Dropdown menu   |
 |--------------------------|
-| <img src="docs-img/dropdown.png" alt="Dropdown menu" width="300" /> |
+| <img src="docs-img/dropdown.png" alt="Dropdown menu" width="150" /> |
 
 ### 3. Botão "Load Costs"
 Outra funcionalidade relevante é o botão **"loadCostsBtn"**, que está integrado para:
@@ -34,7 +34,7 @@ Outra funcionalidade relevante é o botão **"loadCostsBtn"**, que está integra
 
 | Ex. Botão e Tabela   |
 |--------------------------|
-| <img src="docs-img/table.png" alt="Botão e Tabela" width="300" /> |
+| <img src="docs-img/table.png" alt="Botão e Tabela" width="500" /> |
 
 A população da tabela é feita utilizando **JavaScript**, que realiza uma requisição ao ficheiro `custos.xml`. O script interpreta os dados no formato XML e os insere dinamicamente no HTML, proporcionando uma solução elegante para apresentar informações adicionais sem recarregar a página.
 
