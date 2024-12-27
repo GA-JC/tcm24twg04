@@ -118,6 +118,7 @@ function initLoadCosts() {
                       let currencySymbol = '';
                       let cityName = '';
 
+                      // Verificar a página atual para definir cityName
                       if (currentPage.includes('boston.html')) {
                           cityName = 'Boston';
                           currencySymbol = '$';
@@ -126,6 +127,7 @@ function initLoadCosts() {
                           currencySymbol = '€';
                       }
 
+                      console.log('Página atual:', currentPage); // Log da página atual
                       console.log('Cidade a verificar:', cityName); // Log da cidade a verificar
                       let foundCity = false; // Flag verificar a cidade encontrada
 
