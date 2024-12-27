@@ -29,7 +29,7 @@ P.S. Ainda não conseguimos dar streamline nos deploys da plataforma. Todos os f
 |-------------------|-------|
 | Boston Bay   | <img src="build/images/Boston_Back_Bay.jpg" alt="Image 1" width="300" /> |
 | Monte Carlo   | <img src="build/images/monte-carlo.jpg" alt="Image 1" width="300" /> |
-| GA-JC   | <img src="build/images/GA-JC.jpg" alt="Image 1" width="300" /> |
+| GA-JC   | <img src="build/images/GA-JC.png" alt="Image 1" width="300" /> |
 
 ## Technologies
 
