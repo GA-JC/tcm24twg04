@@ -75,64 +75,64 @@ function init() {
     }
   }
 
-  // DADOS XML TO TABLE
-  function initLoadCosts() {
-    const loadCostsBtn = document.getElementById('loadCostsBtn');
-    const table = document.getElementById('custosTable');
-    const tableFooter = document.querySelector('.table-footer');
+// DADOS XML TO TABLE
+function initLoadCosts() {
+  const loadCostsBtn = document.getElementById('loadCostsBtn');
+  const table = document.getElementById('custosTable');
+  const tableFooter = document.querySelector('.table-footer');
 
-    if (loadCostsBtn) {
-        loadCostsBtn.addEventListener('click', function () {
-            console.log('Botão "loadCostsBtn" clicado');
+  if (loadCostsBtn) {
+      loadCostsBtn.addEventListener('click', function () {
+          console.log('Botão "loadCostsBtn" clicado');
 
-            const tbody = table.querySelector('tbody');
-            tbody.innerHTML = ''; // clear table
+          const tbody = table.querySelector('tbody');
+          tbody.innerHTML = ''; // clear table
 
-            // verificar visibilidade
-            if (table.classList.contains('show')) {
-                table.classList.remove('show');
-                table.style.display = 'none';
-                tableFooter.style.display = 'none';
-            } else {
-                // if table hidden, fetch
-                fetch('custos.xml')
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.text();
-                    })
-                    .then(data => {
-                        const parser = new DOMParser();
-                        const xmlDoc = parser.parseFromString(data, "text/xml");
-                        const locais = xmlDoc.getElementsByTagNameNS("https://tcm24twg04.netlify.app", "local");
+          // verificar visibilidade
+          if (table.classList.contains('show')) {
+              table.classList.remove('show');
+              table.style.display = 'none';
+              tableFooter.style.display = 'none';
+          } else {
+              // if table hidden, fetch
+              fetch('custos.xml')
+                  .then(response => {
+                      if (!response.ok) {
+                          throw new Error('Network response was not ok');
+                      }
+                      return response.text();
+                  })
+                  .then(data => {
+                      const parser = new DOMParser();
+                      const xmlDoc = parser.parseFromString(data, "text/xml");
+                      const locais = xmlDoc.getElementsByTagNameNS("https://tcm24twg04.netlify.app", "local");
 
-                        const currentPage = window.location.pathname;
-                        let currencySymbol = '';
-                        let cityName = '';
+                      const currentPage = window.location.pathname;
+                      let currencySymbol = '';
+                      let cityName = '';
 
-                        if (currentPage.includes('boston.html')) {
-                            cityName = 'Boston';
-                            currencySymbol = '$';
-                        } else if (currentPage.includes('monaco.html')) {
-                            cityName = 'Monaco';
-                            currencySymbol = '€';
-                        }
+                      if (currentPage.includes('boston.html')) {
+                          cityName = 'Boston';
+                          currencySymbol = '$';
+                      } else if (currentPage.includes('monaco.html')) {
+                          cityName = 'Monaco';
+                          currencySymbol = '€';
+                      }
 
-                        for (let i = 0; i < locais.length; i++) {
-                            if (locais[i].getAttribute('nome') === cityName) {
-                                const custos = locais[i].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "custo");
+                      for (let i = 0; i < locais.length; i++) {
+                          if (locais[i].getAttribute('nome') === cityName) {
+                              const custos = locais[i].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "custo");
 
-                                for (let j = 0; j < custos.length; j++) {
+                              for (let j = 0; j < custos.length; j++) {
                                   const item = custos[j].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "item")[0].textContent;
                                   const valor = custos[j].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "valor")[0].textContent;
 
                                   const row = document.createElement('tr');
                                   const cellItem = document.createElement('td');
-                                  cellItem.textContent = item;
+                                  cellItem.textContent = item; // Usando textContent
 
                                   const cellValor = document.createElement('td');
-                                  cellValor.textContent = `${currencySymbol}${valor}`;
+                                  cellValor.textContent = `${currencySymbol}${valor}`; // Usando textContent
 
                                   row.appendChild(cellItem);
                                   row.appendChild(cellValor);
