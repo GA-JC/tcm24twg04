@@ -27,9 +27,9 @@ P.S. Ainda não conseguimos dar streamline nos deploys da plataforma. Todos os f
 
 | Image Description | Image |
 |-------------------|-------|
-| Boston Bay   | <img src="Boston_Back_Bay.jpg" alt="Image 1" width="300" /> |
-| Example Image 2   | ![Image 2](link_to_image_2) |
-| Example Image 3   | ![Image 3](link_to_image_3) |
+| Boston Bay   | <img src="build/images/Boston_Back_Bay.jpg" alt="Image 1" width="300" /> |
+| Monte Carlo   | <img src="build/images/monte-carlo.jpg" alt="Image 1" width="300" /> |
+| GA-JC   | <img src="build/images/GA-JC.jpg" alt="Image 1" width="300" /> |
 
 ## Technologies
 
