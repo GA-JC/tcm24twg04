@@ -154,29 +154,11 @@ function initLoadCosts() {
   }
 }
 
-function initTogglePhrase() {
-  const togglePhraseBtn = document.getElementById('togglePhraseBtn');
-  const irsPhrase = document.getElementById('irsPhrase');
-
-  if (togglePhraseBtn) {
-      togglePhraseBtn.addEventListener('click', function () {
-          if (irsPhrase.style.display === 'none') {
-              irsPhrase.style.display = 'block'; // Show the phrase
-          } else {
-              irsPhrase.style.display = 'none'; // Hide the phrase
-          }
-      });
-  }
-}
-
-// Inicializa as funções quando o DOM estiver completamente carregado
 document.addEventListener('DOMContentLoaded', function () {
   initDropdownMenu();
   initCarousel();
   initLoadCosts();
-  initTogglePhrase();
 });
 }
 
-// Chama a função init para iniciar o script
 init();
