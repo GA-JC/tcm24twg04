@@ -66,79 +66,74 @@ function init() {
 
   // DADOS XML TO TABLE
   function initLoadCosts() {
-    const loadCostsBtn = document.getElementById('loadCostsBtn'); // botão
+    const loadCostsBtn = document.getElementById('loadCostsBtn');
     const table = document.getElementById('custosTable');
-    const tableFooter = document.querySelector('.table-footer'); // rodapé da tabela
+    const tableFooter = document.querySelector('.table-footer');
 
-    if (loadCostsBtn) { // existência do botão
-        loadCostsBtn.addEventListener('click', function () {
-            console.log('Botão "loadCostsBtn" clicado');
+    loadCostsBtn.addEventListener('click', function () {
+        console.log('Botão "loadCostsBtn" clicado');
 
-            // visibilidade da tabela
-            if (table.classList.contains('show')) {
-                table.classList.remove('show'); 
-                table.style.display = 'none'; // esconder
-                tableFooter.style.display = 'none'; // esconder
-            } else {
-                const tbody = table.querySelector('tbody');
-                tbody.innerHTML = ''; // limpar tabela
+        if (table.classList.contains('show')) {
+            table.classList.remove('show');
+            table.style.display = 'none';
+            tableFooter.style.display = 'none';
+        } else {
+            const tbody = table.querySelector('tbody');
+            tbody.innerHTML = ''; // clear table
 
-                // requisição arquivo XML
-                fetch('custos.xml')
-                    .then(function (response) {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.text();
-                    })
-                    .then(function (data) {
-                        const parser = new DOMParser();
-                        const xmlDoc = parser.parseFromString(data, "text/xml");
-                        const locais = xmlDoc.getElementsByTagName('local');
+            fetch('custos.xml')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(data, "text/xml");
+                    const locais = xmlDoc.getElementsByTagName('local');
 
-                        const currentPage = window.location.pathname; // caminho da URL
-                        let currencySymbol = '';
-                        let cityName = '';
+                    const currentPage = window.location.pathname;
+                    let currencySymbol = '';
+                    let cityName = '';
 
-                        // entre $ ou €
-                        if (currentPage.includes('boston.html')) {
-                            cityName = 'Boston';
-                            currencySymbol = '$'; // $ para Boston
-                        } else if (currentPage.includes('monaco.html')) {
-                            cityName = 'Monaco';
-                            currencySymbol = '€'; // € para Monaco
-                        }
+                    if (currentPage.includes('boston.html')) {
+                        cityName = 'Boston';
+                        currencySymbol = '$';
+                    } else if (currentPage.includes('monaco.html')) {
+                        cityName = 'Monaco';
+                        currencySymbol = '€';
+                    }
 
-                        for (let i = 0; i < locais.length; i++) {
-                            if (locais[i].getAttribute('nome') === cityName) {
-                                const custos = locais[i].getElementsByTagName('custo'); // obter elementos <custo>
+                    for (let i = 0; i < locais.length; i++) {
+                        if (locais[i].getAttribute('nome') === cityName) {
+                            const custos = locais[i].getElementsByTagName('custo');
 
-                                // elementos <custo> e adicionar linhas
-                                for (let j = 0; j < custos.length; j++) {
-                                    const item = custos[j].getElementsByTagName('item')[0].textContent; // item
-                                    const valor = custos[j].getElementsByTagName('valor')[0].textContent; // valor
+                            for (let j = 0; j < custos.length; j++) {
+                                const item = custos[j].getElementsByTagName('item')[0].textContent;
+                                const valor = custos[j].getElementsByTagName('valor')[0].textContent;
 
-                                    // Escapar caracteres especiais
-                                    const escapedItem = item.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-                                    const escapedValor = valor.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                                const escapedItem = item.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                                const escapedValor = valor.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-                                    const row = `<tr><td>${escapedItem}</td><td>${currencySymbol}${escapedValor}</td></tr>`; // adicionar currencySymbol
-                                    tbody.innerHTML += row; // adicionar linha ao corpo da tabela
-                                }
+                                const row = `<tr><td>${escapedItem}</td><td>${currencySymbol}${escapedValor}</td></tr>`;
+                                tbody.innerHTML += row; // add row body
+                              }
+  
+                              // table
+                              table.classList.add('show');
+                              table.style.display = 'table';
+                              tableFooter.style.display = 'block';
+                          }
+                      }
+                  })
+                  .catch(error => {
+                      console.error('Erro ao carregar o XML:', error); // erro xml
+                  });
+          }
+      });
+  };
 
-                                table.classList.add('show');
-                                table.style.display = 'table';
-                                tableFooter.style.display = 'block';
-                            }
-                        }
-                    })
-                    .catch(function (error) {
-                        console.error('Erro ao carregar o XML:', error); // erro xml
-                    });
-            }
-        });
-    }
-}
 
   document.addEventListener('DOMContentLoaded', function () {
     initDropdownMenu();
