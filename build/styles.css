@@ -56,6 +56,10 @@ header .logo img:hover {
     transform: scale(1.2); /* aumenta a img ao passar o mouse */
 }
 
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 a:focus {
     outline: none;
     color: inherit;
