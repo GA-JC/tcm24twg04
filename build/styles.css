@@ -373,6 +373,10 @@ iframe {
         text-align: left;
     }
 
+    nav ul li .dropdown li {
+        padding: 5px 0;
+    }
+
     header .logo img {
         height: 70px;
         width: 102px;
