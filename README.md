@@ -23,7 +23,6 @@ P.S. Ainda não conseguimos dar streamline nos deploys da plataforma. Todos os f
 | [Aceder à sub-pasta /build](build/) |
 |:----------------------------------:|
 | [Aceder ao Relatório /docs](docs/Relatório.md) |
-|:----------------------------------:|
 
 ## Gallery
 
