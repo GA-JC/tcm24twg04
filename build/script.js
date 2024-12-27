@@ -104,21 +104,21 @@ function initLoadCosts() {
                       return response.text();
                   })
                   .then(data => {
-                      console.log('Dados XML recebidos:', data); // Log dos dados recebidos
+                      console.log('Dados XML recebidos:', data);
                       const parser = new DOMParser();
                       const xmlDoc = parser.parseFromString(data, "text/xml");
                       const locais = xmlDoc.getElementsByTagNameNS("https://tcm24twg04.netlify.app", "local");
 
                       if (locais.length === 0) {
                           console.error('Nenhum local encontrado no XML.');
-                          return; // Retornar se não houver locais
+                          return; // retornar se não houver locais
                       }
 
                       const currentPage = window.location.pathname;
                       let currencySymbol = '';
                       let cityName = '';
 
-                      // Verificar a página atual para definir cityName
+                      // verificar página atual
                       if (currentPage.includes('/boston')) {
                           cityName = 'Boston';
                           currencySymbol = '$';
@@ -127,12 +127,12 @@ function initLoadCosts() {
                           currencySymbol = '€';
                       }
 
-                      console.log('Página atual:', currentPage); // Log da página atual
-                      console.log('Cidade a verificar:', cityName); // Log da cidade a verificar
-                      let foundCity = false; // Flag verificar a cidade encontrada
+                      console.log('Página atual:', currentPage);
+                      console.log('Cidade a verificar:', cityName);
+                      let foundCity = false;
 
                       for (let i = 0; i < locais.length; i++) {
-                          console.log('Verificando local:', locais[i].getAttribute('nome')); // Log do nome do local
+                          console.log('Verificando local:', locais[i].getAttribute('nome'));
                           if (locais[i].getAttribute('nome') === cityName) {
                               foundCity = true;
                               const custos = locais[i].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "custo");
