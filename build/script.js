@@ -119,10 +119,10 @@ function initLoadCosts() {
                       let cityName = '';
 
                       // Verificar a página atual para definir cityName
-                      if (currentPage.includes('boston.html')) {
+                      if (currentPage.includes('/boston')) {
                           cityName = 'Boston';
                           currencySymbol = '$';
-                      } else if (currentPage.includes('monaco.html')) {
+                      } else if (currentPage.includes('/monaco')) {
                           cityName = 'Monaco';
                           currencySymbol = '€';
                       }
