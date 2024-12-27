@@ -94,7 +94,7 @@ function initLoadCosts() {
               const tbody = table.querySelector('tbody');
               tbody.innerHTML = ''; // clear table
 
-              fetch('data/custos.xml')
+              fetch('custos.xml')
                   .then(response => {
                       if (!response.ok) {
                           throw new Error('Network response was not ok');
