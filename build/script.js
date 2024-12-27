@@ -84,7 +84,7 @@ function init() {
           tbody.innerHTML = ''; // clear table
 
           // requisição arquivo XML
-          fetch('custos.xml')
+          fetch('/custos.xml')
             .then(function (response) {
               if (!response.ok) {
                 throw new Error('Network response was not ok');
