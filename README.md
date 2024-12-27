@@ -37,6 +37,7 @@ P.S. Ainda não conseguimos dar streamline nos deploys da plataforma. Todos os f
 - [XML](https://www.w3schools.com/xml/)
 - [HTML5](https://www.w3schools.com/html/html5_intro.asp) + [CSS3](https://www.w3schools.com/css/css_intro.asp)
 - [JavaScript](https://www.w3schools.com/js/)
+- [XML](https://www.w3schools.com/xml/)
 
 
 
