@@ -13,7 +13,13 @@ O projeto consiste em um website estilo portfólio digital sobre experiências d
 Este projeto está "LIVE" com recurso à plataforma Netlify.
 Através da criação de um projeto com acesso ao reportório do GitHub, a plataforma Netlify dá deploy automaticamente aos ficheiros presentes no repositório (main@HEAD).
 
-P.S. Ainda não conseguimos dar streamline nos deploys da plataforma. Todos os ficheiros que levam upload para o reportório levam deploy mas apenas os ficheiros que não estão numa sub-pasta ficam legíveis para a mesma. Nós queremos fazer com que a plataforma apenas dê deploy a, por exemplo, main/src.
+Depois de alguns problemas a tentar dar organizar o repositório e mantendo o deploy funcional conseguimos resolver o problema que tinhamos inicalmente nos deparado com, por isso,  atualmente o Netlify dá deploy apenas à pasta /build. 
+
+O Netlify inicialmente não dava deploy a qualquer ficheiro que estivesse numa sub-folder, nós, querendo evitar que o repositório ficasse desorganizado conseguimos mudar nas definições de deploy para que a plataforma apenas fosse ler o código da sub-folder.
+
+| Build Settings |
+|-------------------|
+| <img src="docs/docs-img/build_settings.png" alt="Image 1" width="300" /> |
 
 ## Repository Organization
 
