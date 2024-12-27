@@ -81,19 +81,20 @@ function initLoadCosts() {
   const table = document.getElementById('custosTable');
   const tableFooter = document.querySelector('.table-footer');
 
-  // verificar o botão antes de add event listener
   if (loadCostsBtn) {
       loadCostsBtn.addEventListener('click', function () {
           console.log('Botão "loadCostsBtn" clicado');
 
+          const tbody = table.querySelector('tbody');
+          tbody.innerHTML = ''; // clear table
+
+          // verificar visibilidade
           if (table.classList.contains('show')) {
               table.classList.remove('show');
               table.style.display = 'none';
               tableFooter.style.display = 'none';
           } else {
-              const tbody = table.querySelector('tbody');
-              tbody.innerHTML = ''; // clear table
-
+              // if table hidden, fetch
               fetch('custos.xml')
                   .then(response => {
                       if (!response.ok) {
@@ -104,7 +105,7 @@ function initLoadCosts() {
                   .then(data => {
                       const parser = new DOMParser();
                       const xmlDoc = parser.parseFromString(data, "text/xml");
-                      const locais = xmlDoc.getElementsByTagName('local');
+                      const locais = xmlDoc.getElementsByTagNameNS("https://tcm24twg04.netlify.app", "local"); // Usando o namespace
 
                       const currentPage = window.location.pathname;
                       let currencySymbol = '';
@@ -120,20 +121,25 @@ function initLoadCosts() {
 
                       for (let i = 0; i < locais.length; i++) {
                           if (locais[i].getAttribute('nome') === cityName) {
-                              const custos = locais[i].getElementsByTagName('custo');
+                              const custos = locais[i].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "custo"); // Usando o namespace
 
                               for (let j = 0; j < custos.length; j++) {
-                                  const item = custos[j].getElementsByTagName('item')[0].textContent;
-                                  const valor = custos[j].getElementsByTagName('valor')[0].textContent;
+                                  const item = custos[j].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "item")[0].textContent; // Usando o namespace
+                                  const valor = custos[j].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "valor")[0].textContent; // Usando o namespace
 
-                                  const escapedItem = item.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-                                  const escapedValor = valor.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                                  const row = document.createElement('tr');
+                                  const cellItem = document.createElement('td');
+                                  cellItem.textContent = item;
 
-                                  const row = `<tr><td>${escapedItem}</td><td>${currencySymbol}${escapedValor}</td></tr>`;
-                                  tbody.innerHTML += row; // add row body
+                                  const cellValor = document.createElement('td');
+                                  cellValor.textContent = `${currencySymbol}${valor}`;
+
+                                  row.appendChild(cellItem);
+                                  row.appendChild(cellValor);
+                                  tbody.appendChild(row); // add row to table body
                               }
 
-                              // table
+                              // mostrar table dps de carregar os dados
                               table.classList.add('show');
                               table.style.display = 'table';
                               tableFooter.style.display = 'block';
@@ -141,13 +147,12 @@ function initLoadCosts() {
                       }
                   })
                   .catch(error => {
-                      console.error('Erro ao carregar o XML:', error); // erro xml
+                      console.error('Erro ao carregar o XML:', error); // Erro ao carregar o XML
                   });
           }
       });
   }
 }
-
 
 document.addEventListener('DOMContentLoaded', function () {
   initDropdownMenu();
