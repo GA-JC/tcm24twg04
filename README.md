@@ -15,12 +15,12 @@ Através da criação de um projeto com acesso ao reportório do GitHub, a plata
 
 P.S. Ainda não conseguimos dar streamline nos deploys da plataforma. Todos os ficheiros que levam upload para o reportório levam deploy mas apenas os ficheiros que não estão numa sub-pasta ficam legíveis para a mesma. Nós queremos fazer com que a plataforma apenas dê deploy a, por exemplo, main/src.
 
-| [Aceder à sub-pasta /src](src/) |
+| [Aceder à sub-pasta /build](build/) |
 |:----------------------------------:|
 
 ## Repository Organization
 
-- Source code is in the `src` folder.
+- Code is in the `build` folder.
 - Report chapters are in the `docs` folder.
 
 ## Gallery
