@@ -50,3 +50,6 @@ Através da inserção de diversos **console.logs** em pontos estratégicos do c
 - [HTML5](https://www.w3schools.com/html/html5_intro.asp) + [CSS3](https://www.w3schools.com/css/css_intro.asp)
 - [JavaScript](https://www.w3schools.com/js/)
 - [XML](https://www.w3schools.com/xml/)
+
+| [Aceder ao README](README.md) |
+|:----------------------------------:|
