@@ -3,7 +3,7 @@
     <!ENTITY dollar "&#36;">
     <!ENTITY euro "&#x20AC;">
 ]>
-<custos xmlns="https://tcm24twg04.netlify.app/">
+<custos xmlns="https://tcm24twg04.netlify.app/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://tcm24twg04.netlify.app/ custos.xsd">
     <local nome="Boston">
         <currency>&dollar;</currency>
         <custo>
