@@ -46,7 +46,7 @@ header .logo {
 
 header .logo img {
     height: 100px;
-    width: auto;
+    width: 132px;
     max-width: 100%;
     cursor: pointer; /* indica que é clicável */
     transition: transform 0.3s ease; /* animação ao transformar */
@@ -58,6 +58,7 @@ header .logo img:hover {
 
 a:focus {
     outline: none;
+    color: inherit;
 }
 
 nav {
@@ -354,12 +355,12 @@ iframe {
 
     nav a {
         font-size: 12px; /* font size mobile */
-        padding: 10px 15px;
+        padding: 10px 10px;
     }
 
     nav ul {
-    justify-content: flex-start;
-    width: auto;
+        justify-content: flex-start;
+        width: auto;
     }
 
     nav ul li {
@@ -369,7 +370,8 @@ iframe {
     }
 
     header .logo img {
-        height: auto;
+        height: 70px;
+        width: 102px;
     }
 
     .carousel {

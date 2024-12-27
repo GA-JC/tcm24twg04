@@ -81,103 +81,108 @@ function initLoadCosts() {
   const table = document.getElementById('custosTable');
   const tableFooter = document.querySelector('.table-footer');
 
-  if (loadCostsBtn) {
-      loadCostsBtn.addEventListener('click', function () {
-          console.log('Botão "loadCostsBtn" clicado');
-
-          const tbody = table.querySelector('tbody');
-          tbody.innerHTML = ''; // clear table
-
-          // verificar visibilidade
-          if (table.classList.contains('show')) {
-              table.classList.remove('show');
-              table.style.display = 'none';
-              tableFooter.style.display = 'none';
-          } else {
-              // if table hidden, fetch
-              fetch('custos.xml')
-                  .then(response => {
-                      if (!response.ok) {
-                          console.error('Erro na resposta da rede:', response.status, response.statusText);
-                          throw new Error('Network response was not ok');
-                      }
-                      return response.text();
-                  })
-                  .then(data => {
-                      console.log('Dados XML recebidos:', data);
-                      const parser = new DOMParser();
-                      const xmlDoc = parser.parseFromString(data, "text/xml");
-                      const locais = xmlDoc.getElementsByTagNameNS("https://tcm24twg04.netlify.app", "local");
-
-                      if (locais.length === 0) {
-                          console.error('Nenhum local encontrado no XML.');
-                          return; // retornar se não houver locais
-                      }
-
-                      const currentPage = window.location.pathname;
-                      let currencySymbol = '';
-                      let cityName = '';
-
-                      // verificar página atual
-                      if (currentPage.includes('/boston')) {
-                          cityName = 'Boston';
-                          currencySymbol = '$';
-                      } else if (currentPage.includes('/monaco')) {
-                          cityName = 'Monaco';
-                          currencySymbol = '€';
-                      }
-
-                      console.log('Página atual:', currentPage);
-                      console.log('Cidade a verificar:', cityName);
-                      let foundCity = false;
-
-                      for (let i = 0; i < locais.length; i++) {
-                          console.log('Verificando local:', locais[i].getAttribute('nome'));
-                          if (locais[i].getAttribute('nome') === cityName) {
-                              foundCity = true;
-                              const custos = locais[i].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "custo");
-
-                              if (custos.length === 0) {
-                                  console.error('Nenhum custo encontrado para a cidade:', cityName);
-                                  return;
-                              }
-
-                              for (let j = 0; j < custos.length; j++) {
-                                  const item = custos[j].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "item")[0].textContent;
-                                  const valor = custos[j].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "valor")[0].textContent;
-
-                                  const row = document.createElement('tr');
-                                  const cellItem = document.createElement('td');
-                                  cellItem.textContent = item;
-
-                                  const cellValor = document.createElement('td');
-                                  cellValor.textContent = `${currencySymbol}${valor}`;
-
-                                  row.appendChild(cellItem);
-                                  row.appendChild(cellValor);
-                                  tbody.appendChild(row); // add row to table body
-                              }
-
-                              // mostrar table dps de carregar os dados
-                              table.classList.add('show');
-                              table.style.display = 'table';
-                              tableFooter.style.display = 'block';
-                              console.log('Tabela exibida com os dados carregados.');
-                          }
-                      }
-
-                      if (!foundCity) {
-                          console.error('Cidade não encontrada no XML:', cityName);
-                      }
-                  })
-                  .catch(error => {
-                      console.error('Erro ao carregar o XML:', error);
-                  });
-          }
-      });
-  } else {
+  if (!loadCostsBtn) {
+    const currentPage = window.location.pathname;
+    if (currentPage.includes('boston.html') || currentPage.includes('monaco.html')) 
+    {
       console.error('Botão "loadCostsBtn" não encontrado no DOM.');
-  }
+    }
+    return;
+}
+
+  loadCostsBtn.addEventListener('click', function () {
+      console.log('Botão "loadCostsBtn" clicado');
+
+      const tbody = table.querySelector('tbody');
+      tbody.innerHTML = ''; // clear table
+
+      // verificar visibilidade
+      if (table.classList.contains('show')) {
+          table.classList.remove('show');
+          table.style.display = 'none';
+          tableFooter.style.display = 'none';
+      } else {
+          // if table hidden, fetch
+          fetch('custos.xml')
+              .then(response => {
+                  if (!response.ok) {
+                      console.error('Erro na resposta da rede:', response.status, response.statusText);
+                      throw new Error('Network response was not ok');
+                  }
+                  return response.text();
+              })
+              .then(data => {
+                  console.log('Dados XML recebidos:', data);
+                  const parser = new DOMParser();
+                  const xmlDoc = parser.parseFromString(data, "text/xml");
+                  const locais = xmlDoc.getElementsByTagNameNS("https://tcm24twg04.netlify.app", "local");
+
+                  if (locais.length === 0) {
+                      console.error('Nenhum local encontrado no XML.');
+                      return; // retornar se não houver locais
+                  }
+
+                  const currentPage = window.location.pathname;
+                  let currencySymbol = '';
+                  let cityName = '';
+
+                  // verificar página atual
+                  if (currentPage.includes('/boston')) {
+                      cityName = 'Boston';
+                      currencySymbol = '$';
+                  } else if (currentPage.includes('/monaco')) {
+                      cityName = 'Monaco';
+                      currencySymbol = '€';
+                  }
+
+                  console.log('Página atual:', currentPage);
+                  console.log('Cidade a verificar:', cityName);
+                  let foundCity = false;
+
+                  for (let i = 0; i < locais.length; i++) {
+                      console.log('Verificando local:', locais[i].getAttribute('nome'));
+                      if (locais[i].getAttribute('nome') === cityName) {
+                          foundCity = true;
+                          const custos = locais[i].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "custo");
+
+                          if (custos.length === 0) {
+                              console.error('Nenhum custo encontrado para a cidade:', cityName);
+                              return;
+                          }
+
+                          for (let j = 0; j < custos.length; j++) {
+                              const item = custos[j].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "item")[0].textContent;
+                              const valor = custos[j].getElementsByTagNameNS("https://tcm24twg04.netlify.app", "valor")[0].textContent;
+
+                              const row = document.createElement('tr');
+                              const cellItem = document.createElement('td');
+                              cellItem.textContent = item;
+
+                              const cellValor = document.createElement('td');
+                              cellValor.textContent = `${currencySymbol}${valor}`;
+
+                              row.appendChild(cellItem);
+                              row.appendChild(cellValor);
+                              tbody.appendChild(row); // add row to table body
+                          }
+
+                          // mostrar table dps de carregar os dados
+                          table.classList.add('show');
+                          table.style.display = 'table';
+                          tableFooter.style.display = 'block';
+                          console.log('Tabela exibida com os dados carregados.');
+                      }
+                  }
+
+                  if (!foundCity) {
+                      console.error('Cidade não encontrada no XML:', cityName);
+                  }
+              })
+              .catch(error => {
+                  console.error('Erro ao carregar o XML:', error);
+              });
+      }
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
