@@ -2,41 +2,40 @@ function init() {
   // strict mode ?
   'use strict';
 
-  //MENU DROPDOWN
-  function handleDropdownClick(event) {
-    event.preventDefault();
-    dropdown.classList.toggle('active'); // add active (visibilidade)
+// menu drop
+function initDropdownMenu() {
+  const destinosBtn = document.getElementById('destinosBtn'); // button
+  const dropdown = destinosBtn ? destinosBtn.nextElementSibling : null;
+
+  // add event
+  if (destinosBtn) {
+      // Mostrar dropdown ao passar o mouse
+      destinosBtn.addEventListener('mouseenter', function() {
+          dropdown.style.display = "block"; // mostrar dropdown ao passar o mouse
+      });
+
+      // Esconder dropdown ao sair do mouse
+      destinosBtn.addEventListener('mouseleave', function() {
+          dropdown.style.display = "none"; // esconder dropdown ao sair
+      });
+
+      // Esconder dropdown ao sair do mouse do dropdown
+      dropdown.addEventListener('mouseenter', function() {
+          dropdown.style.display = "block"; // manter dropdown visível ao passar o mouse
+      });
+
+      dropdown.addEventListener('mouseleave', function() {
+          dropdown.style.display = "none"; // esconder dropdown ao sair
+      });
   }
 
-  // menu drop
-  function initDropdownMenu() {
-    const destinosBtn = document.getElementById('destinosBtn'); // button
-    const dropdown = destinosBtn ? destinosBtn.nextElementSibling : null;
-
-    // add event
-    if (destinosBtn) {
-      destinosBtn.addEventListener('click', handleDropdownClick);
-    }
-
-    destinosBtn.addEventListener('mouseenter', function() {
-      dropdown.classList.add('active'); // mostrar dropdown ao passar o mouse
-  });
-  
-  // sair menu no click
-  destinosBtn.addEventListener('mouseleave', function() {
-      if (!dropdown.classList.contains('active')) {
-          dropdown.classList.remove('active'); // esconder dropdown ao sair
-      }
-  });
-
-
-    // fechar menu ao clicar fora
-    document.addEventListener('click', function (event) {
+  // fechar menu ao clicar fora
+  document.addEventListener('click', function (event) {
       if (destinosBtn && !destinosBtn.contains(event.target) && dropdown && !dropdown.contains(event.target)) {
-        dropdown.classList.remove('active'); // remover active
+          dropdown.style.display = "none"; // Esconde o dropdown ao clicar fora
       }
-    });
-  }
+  });
+}
 
   // CARROSSEL IMGS
   function initCarousel() {
