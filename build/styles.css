@@ -136,8 +136,8 @@ nav ul li .dropdown.active {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* sombra */
     overflow: hidden;
     position: relative;
-    width: 900px;
-    height: 500px;
+    width: fit-content;
+    height: fit-content;
     max-width: 100%;
     margin: 0 auto;
     display: flex;
@@ -148,14 +148,14 @@ nav ul li .dropdown.active {
 .carousel img {
     width: 1000px;
     height: 500px;
-    object-fit: cover;
+    object-fit:cover;
     display: none; /* esconde imgs inicialmente */
     transition: transform 0.5s ease; /* animação suave */
 }
 
 .small-carousel {
     width: 600px;
-    height: 300px;
+    height: fit-content;
     margin: 0 auto;
 }
 
