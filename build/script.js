@@ -80,15 +80,15 @@ function initLoadCosts() {
   const loadCostsBtn = document.getElementById('loadCostsBtn');
   const table = document.getElementById('custosTable');
   const tableFooter = document.querySelector('.table-footer');
+  const downloadBtn = document.getElementById('downloadBtn');
 
   if (!loadCostsBtn) {
     const currentPage = window.location.pathname;
-    if (currentPage.includes('boston.html') || currentPage.includes('monaco.html')) 
-    {
+    if (currentPage.includes('boston.html') || currentPage.includes('monaco.html')) {
       console.error('Botão "loadCostsBtn" não encontrado no DOM.');
     }
     return;
-}
+  }
 
   loadCostsBtn.addEventListener('click', function () {
       console.log('Botão "loadCostsBtn" clicado');
@@ -101,6 +101,7 @@ function initLoadCosts() {
           table.classList.remove('show');
           table.style.display = 'none';
           tableFooter.style.display = 'none';
+          downloadBtn.style.display = 'none';
       } else {
           // if table hidden, fetch
           fetch('custos.xml')
@@ -170,6 +171,7 @@ function initLoadCosts() {
                           table.classList.add('show');
                           table.style.display = 'table';
                           tableFooter.style.display = 'block';
+                          downloadBtn.style.display = 'block';
                           console.log('Tabela exibida com os dados carregados.');
                       }
                   }
@@ -185,10 +187,42 @@ function initLoadCosts() {
   });
 }
 
+function initDownloadBtn() {
+  document.getElementById('downloadBtn').addEventListener('click', function() {
+      // criar instância do JSZip
+      var zip = new JSZip();
+
+      // requisição para obter os arquivos XML e XSD
+      Promise.all([
+          fetch('custos.xml').then(response => response.text()),
+          fetch('custos.xsd').then(response => response.text())
+      ]).then(function(files) {
+          // add arquivos ao zip
+          zip.file("custos.xml", files[0]); // Add XML
+          zip.file("custos.xsd", files[1]); // Add XSD
+
+          // criar ZIP
+          zip.generateAsync({ type: "blob" })
+              .then(function(content) {
+                  // criar link download
+                  var link = document.createElement('a');
+                  link.href = URL.createObjectURL(content);
+                  link.download = "arquivos_xml-xsd.zip"; // nome zip
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+              });
+      }).catch(function(error) {
+          console.error('Erro ao baixar os arquivos:', error);
+      });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   initDropdownMenu();
   initCarousel();
   initLoadCosts();
+  initDownloadBtn()
 });
 }
 
