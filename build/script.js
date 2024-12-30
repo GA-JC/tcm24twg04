@@ -187,35 +187,40 @@ function initLoadCosts() {
   });
 }
 
+//Botão Download XML e XSD
 function initDownloadBtn() {
-  document.getElementById('downloadBtn').addEventListener('click', function() {
-      // criar instância do JSZip
-      var zip = new JSZip();
+  const downloadBtn = document.getElementById('downloadBtn');
 
-      // requisição para obter os arquivos XML e XSD
-      Promise.all([
-          fetch('custos.xml').then(response => response.text()),
-          fetch('custos.xsd').then(response => response.text())
-      ]).then(function(files) {
-          // add arquivos ao zip
-          zip.file("custos.xml", files[0]); // Add XML
-          zip.file("custos.xsd", files[1]); // Add XSD
+  if (downloadBtn) {
+      downloadBtn.addEventListener('click', function() {
+          // criar instância do JSZip
+          var zip = new JSZip();
 
-          // criar ZIP
-          zip.generateAsync({ type: "blob" })
-              .then(function(content) {
-                  // criar link download
-                  var link = document.createElement('a');
-                  link.href = URL.createObjectURL(content);
-                  link.download = "arquivos_xml-xsd.zip"; // nome zip
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-              });
-      }).catch(function(error) {
-          console.error('Erro ao baixar os arquivos:', error);
+          // requisição para obter os arquivos XML e XSD
+          Promise.all([
+              fetch('custos.xml').then(response => response.text()),
+              fetch('custos.xsd').then(response => response.text())
+          ]).then(function(files) {
+              // add arquivos ao zip
+              zip.file("custos.xml", files[0]); // Add XML
+              zip.file("custos.xsd", files[1]); // Add XSD
+
+              // criar ZIP
+              zip.generateAsync({ type: "blob" })
+                  .then(function(content) {
+                      // criar link download
+                      var link = document.createElement('a');
+                      link.href = URL.createObjectURL(content);
+                      link.download = "arquivos_xml-xsd.zip"; // nome zip
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                  });
+          }).catch(function(error) {
+              console.error('Erro ao baixar os arquivos:', error);
+          });
       });
-  });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
