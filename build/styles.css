@@ -252,6 +252,11 @@ nav ul li .dropdown.active {
     font-size: 14px;
 }
 
+.italic {
+    font-style:italic;
+    font-weight: bold;
+  }
+
 .cards {
     background-color: rgba(250, 250, 250, 0.85);
     margin: 0 auto;
@@ -451,7 +456,7 @@ iframe {
     text-align: center;
 }
 
-#socialMediaTable {
+.socialMediaTable {
     width: 20%;
     border: none;
     border-collapse: collapse;
@@ -460,30 +465,30 @@ iframe {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-#socialMediaTable th, #socialMediaTable td {
+.socialMediaTable th, .socialMediaTable td {
     border: none;
     padding: 5px;
     text-align: center;
 }
 
-#socialMediaTable th {
+.socialMediaTable th {
     background-color: rgba(128, 0, 0, 0.8);
     color: white;
     font-size: 1em;
 }
 
-#socialMediaTable td {
+.socialMediaTable td {
     background-color: rgba(255, 255, 255, 0.9);
     font-size: 0.9em;
 }
 
-#socialMediaTable img {
+.socialMediaTable img {
     width: 30px;
     height: 30px;
     transition: transform 0.3s ease;
 }
 
-#socialMediaTable img:hover {
+.socialMediaTable img:hover {
     transform: scale(1.2);
 }
 
