@@ -54,5 +54,7 @@ Através da inserção de diversos **console.logs** em pontos estratégicos do c
 - [JavaScript](https://www.w3schools.com/js/)
 - [XML](https://www.w3schools.com/xml/)
 
-| [Aceder ao README](../README.md) |
-|:----------------------------------:|
+< Previous	^ Main	Next >
+
+| [Aceder ao README](../README.md) | [Aceder ao README](../README.md) | [Aceder ao README](../README.md) |
+|:----------------------------------:|:----------------------------------:|:----------------------------------:|
