@@ -47,7 +47,7 @@ O Netlify inicialmente não dava deploy a qualquer ficheiro que estivesse numa s
 
 ### User Interface – Interface com o utilizador
 
-- Chapter 3: [Wireframes + Mapa](docs/C3.md)
+- Chapter 3: [Organização](docs/C3.md)
 
 ## Technologies
 
