@@ -42,7 +42,8 @@ O Netlify inicialmente não dava deploy a qualquer ficheiro que estivesse numa s
 - located in the `docs` folder
 
 ### Project Presentation – Apresentação do projeto
-- Chapter 1: [Proposta](docs/Proposta.md)
+- Chapter 1: [Proposta](docs/C1.md)
+- Chapter 2: [Descrição](docs/C2.md)
 
 ## Technologies
 
