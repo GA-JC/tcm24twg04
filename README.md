@@ -49,6 +49,10 @@ O Netlify inicialmente não dava deploy a qualquer ficheiro que estivesse numa s
 
 - Chapter 3: [Organização](docs/C3.md)
 
+### Product - Produto
+
+- Chapter 4: [Configuração e Validação](docs/C4.md)
+
 ## Technologies
 
 - [XML](https://www.w3schools.com/xml/)
