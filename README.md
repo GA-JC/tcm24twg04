@@ -38,6 +38,12 @@ O Netlify inicialmente não dava deploy a qualquer ficheiro que estivesse numa s
 | Monte Carlo   | <img src="build/images/monte-carlo.jpg" alt="Image 1" width="300" /> |
 | GA-JC   | <img src="build/images/GA-JC.png" alt="Image 1" width="300" /> |
 
+## Report
+- located in the `docs` folder
+
+### Project Presentation – Apresentação do projeto
+- Chapter 1: [Proposta] (docs/Proposta.md)
+
 ## Technologies
 
 - [XML](https://www.w3schools.com/xml/)
