@@ -19,10 +19,6 @@ O projeto consiste em um website estilo portfólio digital sobre experiências d
 
 ## Gallery
 
-| Wireframes | <img src="docs-img/wireframes-red.png" alt="Wireframes" width="500" /> |
-|-------|
-| Wireframes | <img src="docs-img/wireframes-red.png" alt="Wireframes" width="500" /> |
-
 | Index Desktop | <img src="docs/docs-img/index.jpg" alt="Index" width="300" /> |
 |-------------------|-------|
 | Index Mobile   | <img src="docs/docs-img/mobile-index.jpg alt="M Index" width="300" /> |
