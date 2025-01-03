@@ -20,9 +20,9 @@ O projeto consiste em um website estilo portfólio digital sobre experiências d
 ## Gallery
 
 | Index Desktop | <img src="docs/docs-img/index.jpg" alt="Index" width="300" /> |
-|-------------------|-------|
-| Index Mobile   | <img src="docs/docs-img/mobile-index.jpg alt="M Index" width="300" /> |
-| GA-JC   | <img src="build/images/GA-JC.png" alt="GA-JC" width="300" /> |
+|-------|-------|
+| Index Mobile | <img src="docs/docs-img/mobile-index.jpg" alt="M Index" width="300" /> |
+| GA-JC | <img src="build/images/GA-JC.png" alt="GA-JC" width="300" /> |
 
 ## Report
 - located in the `docs` folder
