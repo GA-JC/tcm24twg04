@@ -19,11 +19,10 @@ O projeto consiste em um website estilo portfólio digital sobre experiências d
 
 ## Gallery
 
-| Image Description | Image |
+| Index Desktop | <img src="docs/docs-img/index.jpg" alt="Index" width="300" /> |
 |-------------------|-------|
-| Boston Bay   | <img src="build/images/Boston_Back_Bay.jpg" alt="Image 1" width="300" /> |
-| Monte Carlo   | <img src="build/images/monte-carlo.jpg" alt="Image 1" width="300" /> |
-| GA-JC   | <img src="build/images/GA-JC.png" alt="Image 1" width="300" /> |
+| Index Mobile   | <img src="docs/docs-img/mobile-index.jpg alt="M Index" width="300" /> |
+| GA-JC   | <img src="build/images/GA-JC.png" alt="GA-JC" width="300" /> |
 
 ## Report
 - located in the `docs` folder
@@ -40,6 +39,7 @@ O projeto consiste em um website estilo portfólio digital sobre experiências d
 
 - Chapter 4: [Configuração](docs/C4.md)
 - Chapter 5: [Validação](docs/C5.md)
+- Chapter 6: [Implementação](docs/C6.md)
 
 ## Technologies
 
