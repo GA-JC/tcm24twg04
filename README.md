@@ -38,7 +38,8 @@ O projeto consiste em um website estilo portfólio digital sobre experiências d
 
 ### Product - Produto
 
-- Chapter 4: [Configuração e Validação](docs/C4.md)
+- Chapter 4: [Configuração](docs/C4.md)
+- Chapter 5: [Validação](docs/C5.md)
 
 ## Technologies
 
