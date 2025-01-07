@@ -498,6 +498,14 @@ iframe {
 
 
 @media (min-width: 768px) {
+    header {
+        height: 80px; /* h para desktop */
+    }
+
+    footer {
+        height: 80px; /* h para desktop */
+    }
+
     nav ul {
         display: flex;
         align-items: flex-end;
@@ -507,14 +515,6 @@ iframe {
 
     .nav-list {
         display: flex;
-    }
-
-    header {
-        height: 80px; /* h para desktop */
-    }
-
-    footer {
-        height: 80px; /* h para desktop */
     }
 }
 
