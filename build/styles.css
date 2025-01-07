@@ -261,14 +261,23 @@ nav ul li .dropdown.active {
     font-weight: bold;
 }
 
-.cards {
-    background-color: rgba(250, 250, 250, 0.85);
+.indexcard {
+    margin-bottom: 10px;
+}
+
+/* texto travels */
+.quote {
+    background-color: rgba(128, 0, 0, 0.05);
+    border: dashed black 1px;
+    width: max-content;
+    max-width: 90%;
+    border-radius: 8px;
+    display: block;
     margin: 0 auto;
-    /*border-radius: 15px;*/
-    padding: 10px;
-    /* border: 2px solid rgba(128, 0, 0, 0.877); */
-    width: 90%;
-    color: rgb(2, 2, 2);
+    position: relative;
+    margin-bottom: 15px;
+    transform: translateX(0%);
+    padding: 20px;
 }
 
 footer {
@@ -572,5 +581,9 @@ iframe {
 
     iframe {
         height: 600px;
+    }
+
+    .indexcard {
+        margin-bottom: -40%;
     }
 }
