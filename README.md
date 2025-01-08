@@ -15,7 +15,6 @@ O projeto consiste em um website estilo portfólio digital sobre experiências d
 
 | [Aceder à sub-pasta /build](build/) |
 |:----------------------------------:|
-| [Aceder ao Relatório](docs/Relatório.md) |
 
 ## Gallery
 
