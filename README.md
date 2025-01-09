@@ -3,10 +3,14 @@
 
 O projeto consiste em um website estilo portfólio digital sobre experiências de viagem. Temos como objetivo transmitir ao leitor informações e experiências de uma forma simples, e através de várias codificações semióticas, oferecer ao leitor determinados valores em cada elemento, criando uma harmonia entre o conteûdo e o design.
 
+---
+
 ## Proposta de Projeto
 
 | [Aceder à proposta](docs/Proposta.md) |
 |:----------------------------------:|
+
+---
 
 ## Repository Organization
 
@@ -16,12 +20,16 @@ O projeto consiste em um website estilo portfólio digital sobre experiências d
 | [Aceder à sub-pasta /build](build/) |
 |:----------------------------------:|
 
+---
+
 ## Gallery
 
 | Index Desktop | <img src="docs/docs-img/index.png" alt="Index" width="450" /> |
 |-------|-------|
 | Index Mobile | <img src="docs/docs-img/mobile-index.png" alt="M Index" width="150" /> |
 | GA-JC | <img src="build/images/GA-JC.png" alt="GA-JC" width="250" /> |
+
+---
 
 ## Report
 - located in the `docs` folder
@@ -40,6 +48,8 @@ O projeto consiste em um website estilo portfólio digital sobre experiências d
 - Chapter 5: [Validação](docs/C5.md)
 - Chapter 6: [Implementação](docs/C6.md)
 - Chapter 7: [Apresentação](docs/C7.md)
+
+---
 
 ## Technologies
 
