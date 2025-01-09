@@ -38,6 +38,9 @@ O projeto consiste em um website estilo portfólio digital sobre experiências d
 - Chapter 4: [Configuração](docs/C4.md)
 - Chapter 5: [Validação](docs/C5.md)
 - Chapter 6: [Implementação](docs/C6.md)
+
+### Presentation – Apresentação
+
 - Chapter 7: [Apresentação](docs/C7.md)
 
 ---
