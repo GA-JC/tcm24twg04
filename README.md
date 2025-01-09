@@ -7,7 +7,7 @@ O projeto consiste em um website estilo portfólio digital sobre experiências d
 
 ## Proposta de Projeto
 
-| [Aceder à proposta](docs/Proposta.md) |
+| [Aceder à proposta](docs/C1.md) |
 |:----------------------------------:|
 
 ---
