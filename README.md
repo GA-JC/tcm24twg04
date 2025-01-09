@@ -48,7 +48,7 @@ O projeto consiste em um website estilo portfólio digital sobre experiências d
 - [JavaScript](https://www.w3schools.com/js/)
 - [XML](https://www.w3schools.com/xml/)
 
-
+---
 
 ### Team
 - Guilherme Andrade [@adr-g](https://github.com/adr-g)
