@@ -63,6 +63,6 @@ O projeto consiste em um website estilo portfólio digital sobre experiências d
 
 ---
 
-### Team
+## Team
 - Guilherme Andrade [@adr-g](https://github.com/adr-g)
 - Jonathan Claro [@JonathanClaro](https://github.com/JonathanClaro)
