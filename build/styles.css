@@ -534,6 +534,17 @@ footer p {
     transform: scale(1.2);
 }
 
+.home-icon {
+    display: block;
+    margin: 10px auto;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.home-icon:hover {
+    transform: scale(1.2);
+}
 
 @media (min-width: 768px) {
     header {
