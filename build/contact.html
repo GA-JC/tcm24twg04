@@ -34,29 +34,29 @@
         <span class="help-icon" title="Respondemos por email.">&#63;</span>
 
         <div class="form-container">
-            <form id="contact-form" action="https://formspree.io/f/mdkkyelr" method="post">
+            <form id="contact-form" action="https://formsubmit.co/A045395@umaia.pt" method="post">
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" required>
+                <input type="text" name="nome" id="nome" required>
               
                 <label for="email">E-mail:</label>
-                <input type="email" name="email" required>
+                <input type="email" name="email" id="email" required>
               
                 <label for="trip-suggestion">Sugestão de viagem:</label>
-                <input type="text" name="trip-suggestion" required>
+                <input type="text" name="trip-suggestion" id="trip-suggestion" required>
               
                 <label for="visited-place">Se você sugeriu uma viagem, qual foi o lugar visitado?</label>
-                <select name="visited-place">
-                  <option value="">Selecione uma opção</option>
-                  <option value="visited-place">Lugar visitado</option>
-                  <option value="home-country-or-city">País ou cidade de origem</option>
+                <select name="visited-place" id="visited-place" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="visited-place">Lugar visitado</option>
+                    <option value="home-country-or-city">País ou cidade de origem</option>
                 </select>
               
                 <label for="outros">Outros:</label>
-                <input type="text" name="outros" required>
+                <input type="text" name="outros" id="outros" required>
               
                 <button type="submit">Enviar</button>
-              </form>
-          </div>
+            </form>
+        </div>
 
     </main>
 
