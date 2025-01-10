@@ -32,30 +32,32 @@
         <h2>Contacte-nos</h2>
         <p>Por favor, preencha o formulário abaixo para entrar em contacto connosco:</p>
         <span class="help-icon" title="Respondemos por email.">&#63;</span>
+
         <div class="form-container">
-            <form id="contact-form">
-              <label for="name">Nome:</label>
-              <input type="text" id="name" name="name" required>
-          
-              <label for="email">E-mail:</label>
-              <input type="email" id="email" name="email" required>
-          
-              <label for="trip-suggestion">Sugestão de viagem:</label>
-              <input type="text" id="trip-suggestion" name="trip-suggestion" required>
-          
-              <label for="visited-place">Se você sugeriu uma viagem, qual foi o lugar visitado?</label>
-              <select id="visited-place" name="visited-place">
-                <option value="">Selecione uma opção</option>
-                <option value="visited-place">Lugar visitado</option>
-                <option value="home-country-or-city">País ou cidade de origem</option>
-              </select>
-          
-              <label for="outros">Outros:</label>
-              <input type="text" id="outros" name="outros" required>
-          
-              <button type="submit">Enviar</button>
-            </form>
+            <form id="contact-form" action="https://formspree.io/f/mdkkyelr" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" required>
+              
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" required>
+              
+                <label for="trip-suggestion">Sugestão de viagem:</label>
+                <input type="text" name="trip-suggestion" required>
+              
+                <label for="visited-place">Se você sugeriu uma viagem, qual foi o lugar visitado?</label>
+                <select name="visited-place">
+                  <option value="">Selecione uma opção</option>
+                  <option value="visited-place">Lugar visitado</option>
+                  <option value="home-country-or-city">País ou cidade de origem</option>
+                </select>
+              
+                <label for="outros">Outros:</label>
+                <input type="text" name="outros" required>
+              
+                <button type="submit">Enviar</button>
+              </form>
           </div>
+
     </main>
 
     <footer>
