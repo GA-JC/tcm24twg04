@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA-JC Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/GA-JC.png" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul id="navList" class="nav-list">
+                <li>
+                    <a href="#" id="destinosBtn" class="dropdown-toggle">Travels</a>
+                    <ul class="dropdown">
+                        <li><a href="boston.html">Boston</a></li>
+                        <li><a href="monaco.html">Monaco</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html" class="active">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h2>Contacte-nos</h2>
+        <p>Por favor, preencha o formulário abaixo para entrar em contacto connosco:</p>
+        <span class="help-icon" title="Respondemos por email.">&#63;</span>
+
+        <div class="form-container">
+
+            <form id="contact-form" action="https://formspree.io/f/mdkkyelr" method="post">
+              <label for="name">Nome:</label>
+              <input type="text" id="name" name="name" required>
+          
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" required>
+          
+              <label for="trip-suggestion">Sugestão de viagem:</label>
+              <input type="text" id="trip-suggestion" name="trip-suggestion" required>
+          
+              <label for="visited-place">Se você sugeriu uma viagem, qual foi o lugar visitado?</label>
+              <select id="visited-place" name="visited-place">
+                <option value="">Selecione uma opção</option>
+                <option value="visited-place">Lugar visitado</option>
+                <option value="home-country-or-city">País ou cidade de origem</option>
+              </select>
+          
+              <label for="outros">Outros:</label>
+              <input type="text" id="outros" name="outros" required>
+          
+              <button type="submit">Enviar</button>
+            </form>
+
+          </div>
+
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.youtube.com/@GA-JC" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://www.instagram.com/ga_jc_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://x.com/GA_JC_" target="_blank" rel="noopener noreferrer">X</a>
+        </div>
+        <p>© 2024 GA-JC.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
