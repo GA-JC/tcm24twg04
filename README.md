@@ -24,7 +24,7 @@
 ---
 
 ## Report
-- located in the `docs` folder.
+- located in the `docs` folder
 
 ### Project Presentation – Apresentação do projeto
 - Chapter 1: [Proposta](docs/C1.md)
