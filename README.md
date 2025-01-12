@@ -30,7 +30,7 @@
 - Chapter 1: [Proposta](docs/C1.md)
 - Chapter 2: [Descrição](docs/C2.md)
 
-### User Interface – Interface com o utilizador
+### User Interface – Interface para o utilizador
 
 - Chapter 3: [Organização](docs/C3.md)
 
