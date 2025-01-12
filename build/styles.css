@@ -638,6 +638,9 @@ footer [href] {
     .content p {
         padding: 0 10px;
     }
-
+  
+    .indexcard {
+        margin-bottom: -40%;
+    }
   
 }
